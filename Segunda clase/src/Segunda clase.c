@@ -11,7 +11,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-int main(void) {
+int main(int) {
 	prinf("Hola");
-	return EXIT_SUCCESS;
+	return 0;
 }
