@@ -18,25 +18,30 @@ int calculaMaxMin(int *nMax,int *nMin) {
 	int numero;
 	int flag;
 	int i;
+	int max;
+	int min;
 	flag = 0;
-	i = 1;
+	i = 0;
 
 	while (i < 8)
 	{
 		printf("\nIngrese un numero: ");
 		scanf("%d",&numero);
 
-		if (flag == 0 || numero > nMax)
+		if (flag == 0 || numero < min)
 		{
-			*nMax = numero;
+			min = numero;
 		}
-		if (flag == 0 || numero < nMin)
+		if (flag == 0 || numero > max)
 		{
-			*nMin = numero;
-			flag = 1;
+			max = numero;
 		}
 
-		++i;
+		flag++;
+		i++;
+
+		*nMax = max;
+		*nMin = min;
 	}
 	return 0;
 }
